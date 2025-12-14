@@ -89,7 +89,7 @@ The application will be available at `http://localhost:8080` (or 8081 if 8080 is
 - 🔒 Secure password hashing and authentication
 - 📊 Real-time stock validation
 
-## Default Accounts
+## Default Account
 
 **Admin Account:**
 - Email: admin@sweetshop.com
