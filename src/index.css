@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Sweet Shop Color Palette - Warm candy-inspired tones */
+    --background: 30 50% 98%;
+    --foreground: 340 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 25% 15%;
+
+    /* Rose/Pink primary - like strawberry candy */
+    --primary: 340 65% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Cream secondary */
+    --secondary: 35 40% 92%;
+    --secondary-foreground: 340 25% 20%;
+
+    /* Soft muted tones */
+    --muted: 30 30% 94%;
+    --muted-foreground: 340 10% 45%;
+
+    /* Mint accent */
+    --accent: 160 45% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 20% 88%;
+    --input: 340 20% 88%;
+    --ring: 340 65% 55%;
+
+    --radius: 1rem;
+
+    /* Custom sweet shop tokens */
+    --candy-pink: 340 65% 55%;
+    --candy-pink-light: 340 60% 75%;
+    --candy-rose: 350 70% 60%;
+    --candy-peach: 20 75% 75%;
+    --candy-orange: 25 85% 60%;
+    --candy-mint: 160 45% 45%;
+    --candy-mint-light: 160 50% 85%;
+    --candy-cream: 35 40% 92%;
+    --candy-chocolate: 25 45% 25%;
+
+    /* Gradients */
+    --gradient-candy: linear-gradient(135deg, hsl(340 65% 55%), hsl(350 70% 65%), hsl(20 75% 70%));
+    --gradient-mint: linear-gradient(135deg, hsl(160 45% 45%), hsl(170 50% 55%));
+    --gradient-cream: linear-gradient(180deg, hsl(30 50% 98%), hsl(35 40% 94%));
+    --gradient-hero: linear-gradient(135deg, hsl(340 65% 55%) 0%, hsl(350 70% 60%) 50%, hsl(25 85% 60%) 100%);
+
+    /* Shadows */
+    --shadow-candy: 0 4px 20px -4px hsl(340 65% 55% / 0.25);
+    --shadow-soft: 0 4px 24px -8px hsl(340 25% 15% / 0.1);
+    --shadow-card: 0 2px 12px -2px hsl(340 25% 15% / 0.08);
+
+    /* Sidebar */
+    --sidebar-background: 35 40% 96%;
+    --sidebar-foreground: 340 25% 20%;
+    --sidebar-primary: 340 65% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 30% 92%;
+    --sidebar-accent-foreground: 340 25% 20%;
+    --sidebar-border: 340 20% 88%;
+    --sidebar-ring: 340 65% 55%;
+  }
+
+  .dark {
+    --background: 340 20% 8%;
+    --foreground: 30 30% 95%;
+
+    --card: 340 20% 12%;
+    --card-foreground: 30 30% 95%;
+
+    --popover: 340 20% 12%;
+    --popover-foreground: 30 30% 95%;
+
+    --primary: 340 60% 60%;
+    --primary-foreground: 340 20% 8%;
+
+    --secondary: 340 15% 18%;
+    --secondary-foreground: 30 30% 90%;
+
+    --muted: 340 15% 18%;
+    --muted-foreground: 30 20% 60%;
+
+    --accent: 160 40% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 15% 20%;
+    --input: 340 15% 20%;
+    --ring: 340 60% 60%;
+
+    --sidebar-background: 340 20% 10%;
+    --sidebar-foreground: 30 30% 90%;
+    --sidebar-primary: 340 60% 60%;
+    --sidebar-primary-foreground: 340 20% 8%;
+    --sidebar-accent: 340 15% 16%;
+    --sidebar-accent-foreground: 30 30% 90%;
+    --sidebar-border: 340 15% 18%;
+    --sidebar-ring: 340 60% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Fredoka', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .gradient-candy {
+    background: var(--gradient-candy);
+  }
+
+  .gradient-mint {
+    background: var(--gradient-mint);
+  }
+
+  .gradient-cream {
+    background: var(--gradient-cream);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-candy {
+    box-shadow: var(--shadow-candy);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .text-gradient {
+    background: var(--gradient-candy);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--candy-pink-light));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--candy-pink));
+}
